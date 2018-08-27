@@ -1,0 +1,38 @@
+$main_border: #eeeeee;
+$header_color: #06c1ae;
+$main_color: #f4f8fb;
+@function torem($px){
+    @return $px / 40+rem;
+}
+
+@mixin ellipsis() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin ellipsis2() {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+@mixin ellipsis3() {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+@mixin extend-click(){
+    &:before{
+        content: '';
+        position: absolute;
+        left: -10px;
+        right: -10px;
+        top: 0;
+        bottom: 0;
+    }
+}
+
